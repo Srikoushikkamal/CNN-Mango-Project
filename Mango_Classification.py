@@ -52,3 +52,4 @@ while(True):
         break
 vid.release() 
 cv2.destroyAllWindows() 
+#Escape helps us to Stop Video
