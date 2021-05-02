@@ -1,19 +1,19 @@
 import numpy as np
 from keras.preprocessing import image
 import cv2
-import os
+import os 
 import tensorflow as tf
 from keras.preprocessing.image import ImageDataGenerator
 train_datagen = ImageDataGenerator(rescale = 1./255,
                                    shear_range = 0.2,
                                    zoom_range = 0.2,
                                    horizontal_flip = True)
-training_set = train_datagen.flow_from_directory('/home/skk/Desktop/Apple/train',
+training_set = train_datagen.flow_from_directory('/home/skk/Desktop/Mangoes/train',
                                                  target_size = (64, 64),
                                                  batch_size = 32,
                                                  class_mode = 'binary')
 test_datagen = ImageDataGenerator(rescale = 1./255)
-test_set = test_datagen.flow_from_directory('/home/skk/Desktop/Apple/test',
+test_set = test_datagen.flow_from_directory('/home/skk/Desktop/Mangoes/test',
                                             target_size = (64, 64),
                                             batch_size = 32,
                                             class_mode = 'binary')
@@ -36,18 +36,18 @@ i = 0
 while(True):  
     r, frame = vid.read()
     cv2.imshow('frame', frame)
-    cv2.imwrite('/home/skk/Desktop/Apple/test/final'+str(i)+".jpg", frame)
-    test_image = image.load_img('/home/skk/Desktop/Apple/test/final'+str(i)+".jpg", target_size = (64, 64))
+    cv2.imwrite('/home/skk/Desktop/Mangoes/test/final'+str(i)+".jpg", frame)
+    test_image = image.load_img('/home/skk/Desktop/Mangoes/test/final'+str(i)+".jpg", target_size = (64, 64))
     test_image = image.img_to_array(test_image)
     test_image = np.expand_dims(test_image, axis = 0)
     result = cnn.predict(test_image)
     training_set.class_indices
     if result[0][0] ==1:
-        print("Apple Is Behind The Leaves")
+        print("Rotten")
     if result[0][0] == 0:
-        print("Apple")
-    os.remove('/home/skk/Desktop/Apple/test/final'+str(i)+".jpg")
-    i+=1
+        print("Fresh")
+    os.remove('/home/skk/Desktop/Mangoes/test/final'+str(i)+".jpg")
+    i = i + 1
     if cv2.waitKey(1) & 0xFF == ord('q'): 
         break
 vid.release() 
