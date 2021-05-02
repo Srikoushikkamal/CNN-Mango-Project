@@ -11,7 +11,7 @@
 ## WEB DEPLOYED & Environment
 
 These two files above contain same content, <br>
-    1. The locally initialised predictor, using PYWebIO.  (Video LInk : )<br>
+    1. The locally initialised predictor, using PYWebIO.  (Video LInk : https://drive.google.com/file/d/1ToiATlAqeDTo98b6WVIO7AcJqwNxRC1K/view?usp=sharing )<br>
     2. Simple Inplementation in Console.<br>
 
 ## Environment Used
