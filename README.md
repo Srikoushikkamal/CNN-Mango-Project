@@ -1,5 +1,5 @@
 # CNN-Mango-Project
-> PPT Link ( https://docs.google.com/presentation/d/e/2PACX-1vSQKauTP4ixbRF8k5869EHR-ba4uECU7HdPUPZP9kL3f7957OA0YFx9Iey8npUmBxHm5Fawo-V93eep/pub?start=true&loop=true&delayms=3000 )
+> PPT Link ( https://docs.google.com/presentation/d/e/2PACX-1vSQKauTP4ixbRF8k5869EHR-ba4uECU7HdPUPZP9kL3f7957OA0YFx9Iey8npUmBxHm5Fawo-V93eep/pub?start=true&loop=true&delayms=3000 )<br>
 > 1.This is the Alternate prototype of the Nvidia's Jetson Nano Processor.<br>
 > 2.It is a Supervised CNN based model that classifies Mangoes industrially.
 
